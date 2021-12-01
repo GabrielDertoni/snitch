@@ -90,7 +90,7 @@ func reportSubcommand(project Project, creds IssueAPI, repo string, prependBody 
 
 	for _, todo := range todosToReport {
 		reportedTodo, err := todo.Report(creds, repo,
-			prependBody+"\n\n"+strings.Join(todo.Body, "\n\n"))
+			prependBody+"\n\n"+strings.Join(todo.Body, "\n"))
 
 		if err != nil {
 			return err
